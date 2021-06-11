@@ -15,18 +15,26 @@ with open ("words.txt", 'r') as w:
 
 def gamePrompt ():
     words = list(map(str, allText.split()))
-    word = (random.choice(words))
+    word = "carrot"
+    # (random.choice(words))
     # for letter of words:
     wordLetters = list(word)
     wordLength = (len(wordLetters))
-    print (wordLength)
+    word_selection = "_" * len(wordLetters)
+    print (word_selection)
+    a = input("Make a guess: ")
+    while a == (wordLetters) :
+        replaced = word_selection.replace(word_selection, a)
+        print (replaced)
+        print("You guessed" + replaced)
     
+
 
     # if letters == 
 
 
     # input("Your guess: ")
-    # word_selection = "_" * len(words)
+
 
 gamePrompt()
     
