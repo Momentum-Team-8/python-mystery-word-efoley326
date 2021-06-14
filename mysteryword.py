@@ -18,27 +18,24 @@ def gamePrompt():
     random_word = random.choice(random_words)
     word_length = (len(random_word))
     guesses = []
-    level_choice = input("Choose your difficulty: (E)easy   (M)medium   (D)difficult")
+    numberoftries = 0
+    level_choice = input("Choose your difficulty: (E)easy   (M)medium   (D)difficult").upper()
     for letter in random_word:
         guesses.append('_')
-    if level_choice == range(0, 1, 2):
-        level_choice = str(level_choice)
-        level_choice.upper()
 
 # EASY
     if level_choice == "E":
-        print(guesses)
-        guesses = +1
-        if guesses <= 8:
+        while numberoftries < 9:
+            print(guesses)
             input_letter = str(input("Make a guess: ").lower())
-            if input_letter in random_word:
+            if "input_letter" in "random_word":
                 print("Correct")
-                for letter in range(word_length):
-                    if input_letter == random_word[letter]:
-                        guesses[letter] = random_word[letter]
+            for letter in range(word_length):
+                if input_letter == random_word[letter]:
+                    guesses[letter] = random_word[letter]
                 print(guesses)
-        else :
-            print("Sorry, no more guesses. You lose.")
+        else:
+         print("Sorry, no more guesses. You lose.")
 
 # MEDIUM
     if level_choice == "M":
